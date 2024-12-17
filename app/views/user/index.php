@@ -41,7 +41,8 @@
                             </a>
                             <a class="bg-red-500 text-gray-200 hover:bg-red-700 btn p-2 pl-3 pr-3 rounded-md"
                                 href="/user/delete/<?php echo $peserta['id_peserta']; ?>"
-                                onclick="return confirm('Are you sure?')"><i class="ri-delete-bin-7-line"></i></a>
+                                onclick="return confirm('Are you sure?')"><i class="ri-delete-bin-7-line"></i>
+                            </a>
                         </td>
                         <img src="" alt="">
                         <?php endforeach; ?>
