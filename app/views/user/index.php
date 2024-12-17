@@ -12,37 +12,41 @@
 <body>
     <div class=" p-16">
         <div class="bg-gray-50 rounded-[10px] w-full p-4 shadow-md  items-center">
-            <h1 class="font-bold text-2xl text-sky-600 drop-shadow-md">Daftar Peserta</h1>
-            <a href="/user/create" class="border-2 rounded-sm border-green-300 bg-green-400">Tambah Peserta Baru</a>
+            <div class="flex justify-between">
+                <h1 class="font-bold text-2xl text-sky-600 drop-shadow-md">Daftar Peserta</h1>
+                <a href="/user/create" class="border-2 rounded-md border-green-500 bg-green-400 pl-3 pr-3">Tambah Peserta Baru</a>
+            </div>
             <div class="pt-5 pb-5 flex items-center justify-center w-full overflow-x-auto">
                 <table class=" border-white pb-auto w-full table table-zebra">
 
-                    <tr class="bg-slate-400 text-white  text-center text-lg">
+                    <tr class="bg-slate-400 text-white border-b text-center text-lg ">
                         <th>Id Peserta</th>
                         <th>Nama</th>
                         <th>Email</th>
                         <th>No Handphone</th>
                         <th>Opsi</th>
                     </tr>
-
+                    <tbody>
                     <!-- app/views/user/index.php -->
                     <?php foreach ($Attends as $peserta): ?>
-                    <tr class="pointer hover:bg-gray-300 text-center">
-                        <td><?= htmlspecialchars($peserta['id_peserta']) ?></td>
-                        <td><?= htmlspecialchars($peserta['nama_peserta']) ?></td>
-                        <td><?= htmlspecialchars($peserta['email']) ?> </td>
-                        <td><?= htmlspecialchars($peserta['no_telp']) ?></td>
-                        <td class="text-center">
-                            <a class="bg-blue-600 text-gray-200 hover:bg-blue-800 btn"
+                    <tr class="pointer border-b hover:bg-gray-300 text-center">
+                        <td class="py-2"><?= htmlspecialchars($peserta['id_peserta']) ?></td>
+                        <td class="py-2"><?= htmlspecialchars($peserta['nama_peserta']) ?></td>
+                        <td class="py-2"><?= htmlspecialchars($peserta['email']) ?> </td>
+                        <td class="py-2"><?= htmlspecialchars($peserta['no_telp']) ?></td>
+                        <td class="text-center gap-2 flex justify-center">
+                            <a class="bg-blue-600 text-gray-200 hover:bg-blue-800 btn p-2 pl-3 pr-3 rounded-md"
                                 href="/user/edit/<?php echo $peserta['id_peserta']; ?>">
                                 <i class="ri-edit-line"></i>
                             </a>
-                            <a class="bg-red-500 text-gray-200 hover:bg-red-700 btn "
+                            <a class="bg-red-500 text-gray-200 hover:bg-red-700 btn p-2 pl-3 pr-3 rounded-md"
                                 href="/user/delete/<?php echo $peserta['id_peserta']; ?>"
                                 onclick="return confirm('Are you sure?')"><i class="ri-delete-bin-7-line"></i></a>
                         </td>
+                        <img src="" alt="">
                         <?php endforeach; ?>
                     </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
