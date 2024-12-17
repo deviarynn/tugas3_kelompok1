@@ -1,9 +1,9 @@
 <?php
 // routes.php
 
-require_once 'app/controllers/UserController.php';
+require_once 'app/controllers/AttendsController.php';
 
-$controller = new UserController();
+$controller = new AttendsController();
 $url = $_SERVER['REQUEST_URI'];
 $requestMethod = $_SERVER['REQUEST_METHOD'];
 

@@ -7,12 +7,15 @@
 </head>
 <body>
     <h2>Edit User</h2>
-    <form action="/user/update/<?php echo $user['id']; ?>" method="POST">
+    <form action="/user/update/<?php echo $Attend['id_peserta']; ?>" method="POST">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="<?php echo $user['name']; ?>" required>
+        <input type="text" id="nama" name="nama_peserta" value="<?php echo $Attend['nama_peserta']; ?>" required>
         <br>
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="<?php echo $user['email']; ?>" required>
+        <input type="email" id="email" name="email" value="<?php echo $Attend['email']; ?>" required>
+        <br>
+        <label for="email">No Telp:</label>
+        <input type="no_telp" id="no_telp" name="no_telp" value="<?php echo $Attend['no_telp']; ?>" required>
         <br>
         <button type="submit">Update</button>
     </form>

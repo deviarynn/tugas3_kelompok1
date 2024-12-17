@@ -1,18 +1,17 @@
 <?php
-// app/controllers/UserController.php
-require_once '../app/models/User.php';
+// app/controllers/AttendsController.php
+require_once '../app/models/Peserta.php';
 
-class UserController {
-    private $userModel;
+class AttendsController{
+    private $AttModel;
 
     public function __construct() {
-        $this->userModel = new User();
+        $this->AttModel = new Peserta();
     }
 
     public function index() {
-        $users = $this->userModel->getAllUsers();
+        $Attends = $this->AttModel->getAllPeserta();
         require_once '../app/views/user/index.php';
-
     }
 
     public function create() {
@@ -20,20 +19,21 @@ class UserController {
     }
 
     public function store() {
-        $name = $_POST['name'];
+        $nama_peserta = $_POST['nama_peserta'];
         $email = $_POST['email'];
-        $this->userModel->add($name, $email);
+        $no_telp = $_POST['no_telp'];
+        $this->AttModel->add($nama_peserta, $email, $no_telp);
         header('Location: /user/index');
     }
     // Show the edit form with the user data
-    public function edit($id) {
-        $user = $this->userModel->find($id); // Assume find() gets user by ID
+    public function edit($id_peserta) {
+        $Attend = $this->AttModel->find(id_peserta: $id_peserta); // Assume find() gets user by ID_peserta
         require_once __DIR__ . '/../views/user/edit.php';
     }
 
     // Process the update request
-    public function update($id, $data) {
-        $updated = $this->userModel->update($id, $data);
+    public function update($id_peserta, $data) {
+        $updated = $this->AttModel->update($id_peserta, $data);
         if ($updated) {
             header("Location: /user/index"); // Redirect to user list
         } else {
@@ -42,8 +42,8 @@ class UserController {
     }
 
     // Process delete request
-    public function delete($id) {
-        $deleted = $this->userModel->delete($id);
+    public function delete($id_peserta) {
+        $deleted = $this->AttModel->delete(id_peserta: $id_peserta);
         if ($deleted) {
             header("Location: /user/index"); // Redirect to user list
         } else {
