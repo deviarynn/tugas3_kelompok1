@@ -7,8 +7,18 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
-<body>
-    <div class=" p-16">
+<body class="font-[Atara]">
+    <!-- Navbar -->
+    <nav class="bg-[rgb(167,82,36)] text-white p-2 mb-4 w-full fixed top-0 left-0">
+    <div class="w-full mx-auto flex items-start"> <!-- Navbar dengan elemen di kiri atas -->
+        <!-- Logo dan tulisan Home di pojok kiri atas -->
+        <a href="/" class="flex items-center space-x-2">
+        <img src="https://media.istockphoto.com/id/498494295/id/vektor/web-ikon-tombol-beranda.jpg?s=1024x1024&w=is&k=20&c=8R9FvFO2RtBx-7o_1yoB4LCFdgnwp804FFCOOBP7aGo=" alt="home" class="h-6 w-6">
+        <span class="text-lg font-bold">Dashboard</span>
+        </a>
+    </div>
+</nav>
+    <div class="p-16">
         <div class="bg-gray-50 rounded-[10px] w-full p-4 shadow-md  items-center">
             <div class="flex justify-between">
                 <h1 class="font-bold text-2xl text-sky-600 drop-shadow-md">Daftar Peserta</h1>
@@ -53,7 +63,7 @@
         </div>
             <div class="flex items-center justify-center">
                 <a class="text-center pt-6 text-blue-600" href="#">
-                    <---- Kembali ke halaman utama </a>
+                    <--Kembali ke halaman utama </a>
             </div>
     </div>
 
