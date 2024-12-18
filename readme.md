@@ -1,7 +1,11 @@
 # Praktikum Pemrograman Web 2 - Sistem Informasi Acara Seni Tari dan Budaya 
 
 ## Informasi Umum
-Proyek ini merupakan bagian dari tugas UAS Mata Kuliah Praktikum Web 2 yang dilakukan oleh Kelompok 1 dari kelas TI-2C Politeknik Negeri Cilacap.
+Proyek ini merupakan bagian dari tugas UAS Mata Kuliah Praktikum Web 2 yang dilakukan oleh Kelompok 1 dari kelas TI-2C Politeknik Negeri Cilacap yang beranggotakan 
+1. Devi Aryani
+2. Galih Fitria Fijar Rofiqoh
+3. Muhammad Abi Adzan
+4. Revano Augustofa 
 
 ## Deskripsi Proyek
 Proyek ini merupakan aplikasi web sederhana yang menerapkan arsitektur Model-View-Controller (MVC) dengan menggunakan konsep Pemrograman Berorientasi Objek (OOP). Sistem Informasi Berbasis Web ini merupakan contoh yang menerapkan MVC.
