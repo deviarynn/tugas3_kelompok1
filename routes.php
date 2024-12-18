@@ -1,25 +1,25 @@
 <?php
 // routes.php
 
-require_once 'app/controllers/UserController.php';
+require_once 'app/controllers/SponsorController.php';
 
-$controller = new UserController();
+$controller = new SponsorController();
 $url = $_SERVER['REQUEST_URI'];
 $requestMethod = $_SERVER['REQUEST_METHOD'];
 
-if ($url == '/user/index' || $url == '/') {
+if ($url == '/sponsor/index' || $url == '/') {
     $controller->index();
-} elseif ($url == '/user/create' && $requestMethod == 'GET') {
+} elseif ($url == '/sponsor/create' && $requestMethod == 'GET') {
     $controller->create();
-} elseif ($url == '/user/store' && $requestMethod == 'POST') {
+} elseif ($url == '/sponsor/store' && $requestMethod == 'POST') {
     $controller->store();
-} elseif (preg_match('/\/user\/edit\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
+} elseif (preg_match('/\/sponsor\/edit\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $userId = $matches[1];
     $controller->edit($userId);
-} elseif (preg_match('/\/user\/update\/(\d+)/', $url, $matches) && $requestMethod == 'POST') {
+} elseif (preg_match('/\/sponsor\/update\/(\d+)/', $url, $matches) && $requestMethod == 'POST') {
     $userId = $matches[1];
     $controller->update($userId, $_POST);
-} elseif (preg_match('/\/user\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
+} elseif (preg_match('/\/sponsor\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $userId = $matches[1];
     $controller->delete($userId);
 } else {
