@@ -137,132 +137,132 @@ File ini biasanya berupa HTML, CSS, dan PHP (atau menggunakan template engine se
         </body>
     </html>
     ```
-**Data Table**
-```php
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Data Peserta</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
-</head>
-
-<body>
-    <div class=" p-16">
-        <div class="bg-gray-50 rounded-[10px] w-full p-4 shadow-md  items-center">
-            <div class="flex justify-between">
-                <h1 class="font-bold text-2xl text-sky-600 drop-shadow-md">Daftar Peserta</h1>
-                <a href="/user/create"
-                    class="border-2 rounded-md border-green-500 bg-green-400 pl-3 pr-3 hover:bg-green-700 hover:text-white">Tambah
-                    Peserta Baru</a>
+  **Data Table**
+    ```php
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <title>Data Peserta</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    </head>
+    
+    <body>
+        <div class=" p-16">
+            <div class="bg-gray-50 rounded-[10px] w-full p-4 shadow-md  items-center">
+                <div class="flex justify-between">
+                    <h1 class="font-bold text-2xl text-sky-600 drop-shadow-md">Daftar Peserta</h1>
+                    <a href="/user/create"
+                        class="border-2 rounded-md border-green-500 bg-green-400 pl-3 pr-3 hover:bg-green-700 hover:text-white">Tambah
+                        Peserta Baru</a>
+                </div>
+                <div class="pt-5 pb-5 flex items-center justify-center w-full overflow-x-auto">
+                    <table class=" border-white pb-auto w-full table table-zebra">
+    
+                        <tr class="bg-slate-400 text-white border-b text-center text-lg ">
+                            <th>Id Peserta</th>
+                            <th>Nama</th>
+                            <th>Email</th>
+                            <th>No Handphone</th>
+                            <th>Opsi</th>
+                        </tr>
+    
+                        <!-- app/views/user/index.php -->
+                        <?php foreach ($Attends as $peserta): ?>
+                        <tr class="pointer border-b hover:bg-gray-300 text-center">
+                            <td class="py-2"><?= htmlspecialchars($peserta['id_peserta']) ?></td>
+                            <td class="py-2"><?= htmlspecialchars($peserta['nama_peserta']) ?></td>
+                            <td class="py-2"><?= htmlspecialchars($peserta['email']) ?> </td>
+                            <td class="py-2"><?= htmlspecialchars($peserta['no_telp']) ?></td>
+                            <td class="text-center gap-2 flex justify-center">
+                                <a class="bg-blue-600 text-gray-200 hover:bg-blue-800 btn p-2 pl-3 pr-3 rounded-md"
+                                    href="/user/edit/<?php echo $peserta['id_peserta']; ?>">
+                                    <i class="ri-edit-line"></i>
+                                </a>
+                                <a class="bg-red-500 text-gray-200 hover:bg-red-700 btn p-2 pl-3 pr-3 rounded-md"
+                                    href="/user/delete/<?php echo $peserta['id_peserta']; ?>"
+                                    onclick="return confirm('Are you sure?')"><i class="ri-delete-bin-7-line"></i>
+                                </a>
+                            </td>
+                            <img src="" alt="">
+                            <?php endforeach; ?>
+                        </tr>
+    
+                    </table>
+                </div>
             </div>
-            <div class="pt-5 pb-5 flex items-center justify-center w-full overflow-x-auto">
-                <table class=" border-white pb-auto w-full table table-zebra">
-
-                    <tr class="bg-slate-400 text-white border-b text-center text-lg ">
-                        <th>Id Peserta</th>
-                        <th>Nama</th>
-                        <th>Email</th>
-                        <th>No Handphone</th>
-                        <th>Opsi</th>
-                    </tr>
-
-                    <!-- app/views/user/index.php -->
-                    <?php foreach ($Attends as $peserta): ?>
-                    <tr class="pointer border-b hover:bg-gray-300 text-center">
-                        <td class="py-2"><?= htmlspecialchars($peserta['id_peserta']) ?></td>
-                        <td class="py-2"><?= htmlspecialchars($peserta['nama_peserta']) ?></td>
-                        <td class="py-2"><?= htmlspecialchars($peserta['email']) ?> </td>
-                        <td class="py-2"><?= htmlspecialchars($peserta['no_telp']) ?></td>
-                        <td class="text-center gap-2 flex justify-center">
-                            <a class="bg-blue-600 text-gray-200 hover:bg-blue-800 btn p-2 pl-3 pr-3 rounded-md"
-                                href="/user/edit/<?php echo $peserta['id_peserta']; ?>">
-                                <i class="ri-edit-line"></i>
-                            </a>
-                            <a class="bg-red-500 text-gray-200 hover:bg-red-700 btn p-2 pl-3 pr-3 rounded-md"
-                                href="/user/delete/<?php echo $peserta['id_peserta']; ?>"
-                                onclick="return confirm('Are you sure?')"><i class="ri-delete-bin-7-line"></i>
-                            </a>
-                        </td>
-                        <img src="" alt="">
-                        <?php endforeach; ?>
-                    </tr>
-
-                </table>
-            </div>
+                <div class="flex items-center justify-center">
+                    <a class="text-center pt-6 text-blue-600" href="#">
+                        <---- Kembali ke halaman utama </a>
+                </div>
         </div>
-            <div class="flex items-center justify-center">
-                <a class="text-center pt-6 text-blue-600" href="#">
-                    <---- Kembali ke halaman utama </a>
-            </div>
-    </div>
-
-</body>
-
-</html>
-```
+    
+    </body>
+    
+    </html>
+    ```
 - **Controller:** Mengatur alur data antara Model dan View, serta menangani logika bisnis
   Menerima input dari pengguna (biasanya dari URL atau formulir).
 Memproses logika bisnis dengan memanggil Model.
 Mengirimkan data ke View untuk ditampilkan
 
-```php
-<?php
-// app/controllers/AttendsController.php
-require_once '../app/models/Peserta.php';
-
-class AttendsController{
-    private $AttModel;
-
-    public function __construct() {
-        $this->AttModel = new Peserta();
-    }
-
-    public function index() {
-        $Attends = $this->AttModel->getAllPeserta();
-        require_once '../app/views/user/index.php';
-    }
-
-    public function create() {
-        require_once '../app/views/user/create.php';
-    }
-
-    public function store() {
-        $nama_peserta = $_POST['nama_peserta'];
-        $email = $_POST['email'];
-        $no_telp = $_POST['no_telp'];
-        $this->AttModel->add($nama_peserta, $email, $no_telp);
-        header('Location: /user/index');
-    }
-    // Show the edit form with the user data
-    public function edit($id_peserta) {
-        $Attend = $this->AttModel->find(id_peserta: $id_peserta); // Assume find() gets user by ID_peserta
-        require_once __DIR__ . '/../views/user/edit.php';
-    }
-
-    // Process the update request
-    public function update($id_peserta, $data) {
-        $updated = $this->AttModel->update($id_peserta, $data);
-        if ($updated) {
-            header("Location: /user/index"); // Redirect to user list
-        } else {
-            echo "Failed to update user.";
+    ```php
+    <?php
+    // app/controllers/AttendsController.php
+    require_once '../app/models/Peserta.php';
+    
+    class AttendsController{
+        private $AttModel;
+    
+        public function __construct() {
+            $this->AttModel = new Peserta();
+        }
+    
+        public function index() {
+            $Attends = $this->AttModel->getAllPeserta();
+            require_once '../app/views/user/index.php';
+        }
+    
+        public function create() {
+            require_once '../app/views/user/create.php';
+        }
+    
+        public function store() {
+            $nama_peserta = $_POST['nama_peserta'];
+            $email = $_POST['email'];
+            $no_telp = $_POST['no_telp'];
+            $this->AttModel->add($nama_peserta, $email, $no_telp);
+            header('Location: /user/index');
+        }
+        // Show the edit form with the user data
+        public function edit($id_peserta) {
+            $Attend = $this->AttModel->find(id_peserta: $id_peserta); // Assume find() gets user by ID_peserta
+            require_once __DIR__ . '/../views/user/edit.php';
+        }
+    
+        // Process the update request
+        public function update($id_peserta, $data) {
+            $updated = $this->AttModel->update($id_peserta, $data);
+            if ($updated) {
+                header("Location: /user/index"); // Redirect to user list
+            } else {
+                echo "Failed to update user.";
+            }
+        }
+    
+        // Process delete request
+        public function delete($id_peserta) {
+            $deleted = $this->AttModel->delete(id_peserta: $id_peserta);
+            if ($deleted) {
+                header("Location: /user/index"); // Redirect to user list
+            } else {
+                echo "Failed to delete user.";
+            }
         }
     }
-
-    // Process delete request
-    public function delete($id_peserta) {
-        $deleted = $this->AttModel->delete(id_peserta: $id_peserta);
-        if ($deleted) {
-            header("Location: /user/index"); // Redirect to user list
-        } else {
-            echo "Failed to delete user.";
-        }
-    }
-}
-
-```
+    
+    ```
   
 ## Tech Stack
 - **Bahasa Pemrograman:** PHP
