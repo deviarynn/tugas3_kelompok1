@@ -64,7 +64,7 @@ mvc-sample/
 - **Tampilan Attendees**
 - **Tampilan Sponsorship**
 
-# Controller 
+## Controller 
 Fungsi: Bertindak sebagai penghubung antara Model dan View.
 
 Tugas:
@@ -123,7 +123,7 @@ class AttendsController{
     }
 }
 ```
-# View
+## View
 Fungsi: Bertanggung jawab atas tampilan (user interface).
 
 Tugas:
@@ -131,7 +131,7 @@ Tugas:
 Menampilkan data yang diberikan oleh Controller.
 Tidak memiliki logika bisnis atau interaksi dengan database.
 File ini biasanya berupa HTML, CSS, dan PHP (atau menggunakan template engine seperti Blade di Laravel).
-# Models
+## Models
 Fungsi: Berisi logika bisnis dan interaksi dengan database.
 
 Tugas:
