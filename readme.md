@@ -271,6 +271,6 @@ mvc-sample/
   <img src ='https://github.com/user-attachments/assets/644c92c2-8f4a-485e-98ea-3ddc20b7d157'>
 
 - **Tampilan Attendees**
-- ![image](https://github.com/user-attachments/assets/86fd84ef-291d-4c4e-8d7b-4f57bb431af8)
+ ![image](https://github.com/user-attachments/assets/86fd84ef-291d-4c4e-8d7b-4f57bb431af8)
 
 - **Tampilan Sponsorship**
