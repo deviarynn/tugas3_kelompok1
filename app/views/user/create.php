@@ -1,81 +1,54 @@
 <head>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            padding: 20px;
-        }
-
-        .container {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 5px;
-            max-width: 400px;
-            margin: auto;
-        }
-
-        label {
-            font-weight: bold;
-            margin-top: 10px;
-            display: block;
-        }
-
-        input[type="text"],
-        input[type="email"] {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        a {
-            display: block;
-            text-align: center;
-            margin-top: 15px;
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tambah Organizers</title>
 </head>
 
-<body>
-    <div class="container">
-        <h2>
-            <center>Tambah Organizers</center>
-        </h2>
-        <form action="/user/store" method="POST">
-            <label for="nama_penyelenggara">Nama Penyelenggara:</label>
-            <input type="text" name="nama_penyelenggara" id="nama_penyelenggara" required>
+<body class="bg-gradient-to-b from-[#FAF3E0] to-[#EDE0D4] text-gray-800 min-h-screen flex items-center justify-center">
 
-            <label for="kontak">Kontak:</label>
-            <input type="text" name="kontak" id="kontak" required>
+    <div class="bg-white max-w-lg w-full rounded-xl shadow-2xl p-10 border-t-8 border-orange-700">
 
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" required>
 
-            <button type="submit">Simpan</button>
+        <div class="flex items-center justify-center mb-6">
+
+            <svg class="h-8 w-8 text-orange-700 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M16 14l-4-4m0 0l-4 4m4-4v12M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z" />
+            </svg>
+
+            <h2 class="text-3xl text-orange-700 font-extrabold">Tambah Organizers</h2>
+        </div>
+
+
+        <form action="/user/store" method="POST" class="space-y-6">
+            <div>
+                <label for="nama_penyelenggara" class="block text-lg font-semibold text-gray-700 mb-2">Nama Penyelenggara</label>
+                <input type="text" id="nama_penyelenggara" name="nama_penyelenggara" required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 transition duration-300">
+            </div>
+
+            <div>
+                <label for="kontak" class="block text-lg font-semibold text-gray-700 mb-2">Kontak</label>
+                <input type="text" id="kontak" name="kontak" required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 transition duration-300">
+            </div>
+
+            <div>
+                <label for="email" class="block text-lg font-semibold text-gray-700 mb-2">Email</label>
+                <input type="email" id="email" name="email" required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 transition duration-300">
+            </div>
+
+            <button type="submit"
+                class="w-full bg-orange-700 hover:bg-orange-800 text-white text-lg font-bold py-3 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
+                Simpan
+            </button>
         </form>
-        <a href="/user/index">Kembali ke Daftar Organizers</a>
+
+        <div class="text-center mt-8">
+            <a href="/user/index" class="text-orange-700 hover:text-orange-800 font-semibold text-lg transition duration-300">
+                ← Kembali ke Daftar Organizers
+            </a>
+        </div>
     </div>
+
 </body>

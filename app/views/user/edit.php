@@ -4,85 +4,66 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Organizers</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            padding: 20px;
-        }
-
-        .container {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 5px;
-            max-width: 400px;
-            margin: auto;
-        }
-
-        label {
-            font-weight: bold;
-            margin-top: 10px;
-            display: block;
-        }
-
-        input[type="text"],
-        input[type="email"] {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        a {
-            display: block;
-            text-align: center;
-            margin-top: 15px;
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
-<body>
-    <div class="container">
-        <h2>
-            <center>Edit Organizers</center>
-        </h2>
-        <form action="/user/update/<?php echo $organizer['id_penyelenggara']; ?>" method="POST">
-            <label for="nama_penyelenggara">Nama Penyelenggara:</label>
-            <input type="text" id="nama" name="nama_penyelenggara" value="<?php echo $organizer['nama_penyelenggara']; ?>" required>
+<body class="bg-[#FAF3E0] text-gray-800 min-h-screen flex items-center justify-center">
 
-            <label for="kontak">Kontak:</label>
-            <input type="text" id="kontak" name="kontak" value="<?php echo $organizer['kontak']; ?>" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" value="<?php echo $organizer['email']; ?>" required>
+    <div class="bg-white max-w-md w-full rounded-xl shadow-lg p-8 border-t-8 border-orange-700">
+        <div class="flex items-center justify-center mb-6">
+            <i data-feather="edit" class="text-orange-700 mr-2"></i>
+            <h2 class="text-3xl text-orange-700 font-extrabold text-center">
+                Edit Organizers
+            </h2>
+        </div>
 
-            <button type="submit">Update</button>
+        <form action="/user/update/<?php echo $organizer['id_penyelenggara']; ?>" method="POST" class="space-y-6">
+            <div>
+                <label for="nama_penyelenggara" class="block text-gray-700 font-semibold mb-2">
+                    Nama Penyelenggara:
+                </label>
+                <input type="text" id="nama_penyelenggara" name="nama_penyelenggara"
+                    value="<?php echo $organizer['nama_penyelenggara']; ?>" required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+            </div>
+
+            <div>
+                <label for="kontak" class="block text-gray-700 font-semibold mb-2">
+                    Kontak:
+                </label>
+                <input type="text" id="kontak" name="kontak" value="<?php echo $organizer['kontak']; ?>" required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+            </div>
+
+            <div>
+                <label for="email" class="block text-gray-700 font-semibold mb-2">
+                    Email:
+                </label>
+                <input type="email" id="email" name="email" value="<?php echo $organizer['email']; ?>" required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+            </div>
+
+
+            <button type="submit"
+                class="w-full bg-orange-700 hover:bg-orange-800 text-white font-bold py-3 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                Update
+            </button>
         </form>
-        <a href="/user/index">Back to List</a>
+
+        <div class="text-center mt-6">
+            <a href="/user/index" class="text-orange-700 hover:text-orange-800 font-semibold transition duration-200">
+                ← Back to List
+            </a>
+        </div>
+    </div>
+
+    <script>
+        feather.replace();
+    </script>
 </body>
 
 </html>

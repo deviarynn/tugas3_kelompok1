@@ -1,135 +1,82 @@
 <head>
-    <style>
-        /* Styling Global */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 30px;
-            background-color: #f9f9f9;
-            color: #333;
-        }
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Daftar Organizers</title>
+    <script>
+        function searchOrganizer() {
+            const input = document.getElementById('search-input').value.toLowerCase();
+            const rows = document.querySelectorAll('#organizer-table tbody tr');
 
-        h2 {
-            color: #444;
-            margin-bottom: 20px;
+            rows.forEach(row => {
+                const name = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
+                row.style.display = name.includes(input) ? '' : 'none';
+            });
         }
-
-        a {
-            text-decoration: none;
-            color: #007BFF;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #0056b3;
-            text-decoration: underline;
-        }
-
-        /* Styling Table */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #007BFF;
-            color: #fff;
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        tbody tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        tbody tr:hover {
-            background-color: #e9ecef;
-            transition: background-color 0.3s ease;
-        }
-
-        .actions a {
-            margin-right: 8px;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 0.9em;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .actions a.edit {
-            background-color: #28a745;
-            color: #fff;
-        }
-
-        .actions a.delete {
-            background-color: #dc3545;
-            color: #fff;
-        }
-
-        .actions a.edit:hover {
-            background-color: #218838;
-        }
-
-        .actions a.delete:hover {
-            background-color: #c82333;
-        }
-
-        .add-btn {
-            display: inline-block;
-            margin-bottom: 15px;
-            padding: 10px 20px;
-            background-color: #17a2b8;
-            color: #fff;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .add-btn:hover {
-            background-color: #138496;
-        }
-    </style>
+    </script>
 </head>
 
-<body>
-    <h1>
-        Daftar Organizers
-    </h1>
-    <a href="/user/create" class="add-btn">Tambah Organizers Baru</a>
-    <table>
+<body class="bg-gradient-to-b from-[#FAF3E0] to-[#EDE0D4] text-gray-800 min-h-screen p-8">
+
+
+    <h1 class="text-3xl text-orange-700 font-extrabold mb-4 text-center">Daftar Organizers</h1>
+
+
+    <div class="mb-6 flex justify-between items-center px-6">
+
+
+        <a href="/user/create" class="bg-orange-700 text-white px-4 py-2 rounded-lg font-bold hover:bg-orange-800 transition duration-300 shadow-lg transform hover:scale-105">
+            Tambah Organizers Baru
+        </a>
+
+
+        <div class="flex items-center">
+            <input id="search-input" type="text" placeholder="Cari Organizers..."
+                class="px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 transition duration-300">
+            <button onclick="searchOrganizer()"
+                class="bg-blue-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-blue-700 transition duration-300 ml-3 shadow-lg">
+                Cari
+            </button>
+        </div>
+    </div>
+
+
+    <table id="organizer-table" class="w-full border-collapse shadow-lg rounded-lg overflow-hidden mx-auto bg-white">
         <thead>
-            <tr>
-                <th>Id Penyelenggara</th>
-                <th>Nama Penyelenggara</th>
-                <th>Kontak</th>
-                <th>Email</th>
-                <th>Aksi</th>
+            <tr class="bg-orange-700 text-white text-left uppercase text-sm tracking-wider">
+                <th class="py-3 px-4">Id Penyelenggara</th>
+                <th class="py-3 px-4">Nama Penyelenggara</th>
+                <th class="py-3 px-4">Kontak</th>
+                <th class="py-3 px-4">Email</th>
+                <th class="py-3 px-4 text-center">Aksi</th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($organizers as $organizer): ?>
-                <tr>
-                    <td><?= htmlspecialchars($organizer['id_penyelenggara']) ?></td>
-                    <td><?= htmlspecialchars($organizer['nama_penyelenggara']) ?></td>
-                    <td><?= htmlspecialchars($organizer['kontak']) ?></td>
-                    <td><?= htmlspecialchars($organizer['email']) ?></td>
-                    <td class="actions">
-                        <a href="/user/edit/<?php echo $organizer['id_penyelenggara']; ?>" class="edit">Edit</a>
-                        <a href="/user/delete/<?php echo $organizer['id_penyelenggara']; ?>" class="delete" onclick="return confirm('Are you sure?')">Delete</a>
+                <tr class="hover:bg-gray-100 transition duration-300">
+                    <td class="py-3 px-4 border-b"><?= htmlspecialchars($organizer['id_penyelenggara']) ?></td>
+                    <td class="py-3 px-4 border-b"><?= htmlspecialchars($organizer['nama_penyelenggara']) ?></td>
+                    <td class="py-3 px-4 border-b"><?= htmlspecialchars($organizer['kontak']) ?></td>
+                    <td class="py-3 px-4 border-b"><?= htmlspecialchars($organizer['email']) ?></td>
+                    <td class="py-3 px-4 border-b text-center">
+
+                        <a href="/user/edit/<?php echo $organizer['id_penyelenggara']; ?>" class="inline-block bg-green-600 text-white px-3 py-1 rounded-lg text-sm font-semibold hover:bg-green-700 transition duration-300 mr-2">
+                            Edit
+                        </a>
+
+                        <a href="/user/delete/<?php echo $organizer['id_penyelenggara']; ?>" class="inline-block bg-red-600 text-white px-3 py-1 rounded-lg text-sm font-semibold hover:bg-red-700 transition duration-300"
+                            onclick="return confirm('Are you sure?')">
+                            Delete
+                        </a>
                     </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
+
+
+    <div class="mt-6 text-center">
+        <a href="/" class="text-orange-700 hover:text-orange-800 font-semibold text-lg transition duration-300">
+            ← Kembali ke Halaman Utama
+        </a>
+    </div>
+
 </body>
