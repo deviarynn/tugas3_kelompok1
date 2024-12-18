@@ -1,4 +1,4 @@
-# Praktikum Pemrograman Web 2 - Sistem Informasi Acara Seni Tari dan Budaya 
+# Praktikum Pemrograman Web 2 - Sistem Manajemen Acara Seni dan Budaya
 
 ## Informasi Umum
 Proyek ini merupakan bagian dari tugas UAS Mata Kuliah Praktikum Web 2 yang dilakukan oleh Kelompok 1 dari kelas TI-2C Politeknik Negeri Cilacap yang beranggotakan 
