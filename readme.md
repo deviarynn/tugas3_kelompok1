@@ -87,7 +87,7 @@ Tidak memiliki logika bisnis atau interaksi dengan database.
 File ini biasanya berupa HTML, CSS, dan PHP (atau menggunakan template engine seperti Blade di Laravel).
 
 **Create**
-```php
+```html
 <html lang="en">
 <head>
     <title>Tambah Peserta</title>
@@ -121,13 +121,13 @@ File ini biasanya berupa HTML, CSS, dan PHP (atau menggunakan template engine se
         <!-- app/views/user/edit.php -->
         <form action="/user/update/<?php echo $Attend['id_peserta']; ?>" method="POST">
                 <h1 class="text-2xl font-bold mb-5 text-center text-blue-700 border-b-2 pb-7 border-blue-700 ">Edit Peserta</h1>
-                  <label for="npm" class="block text-sm font-medium text-grey-600">Nama :</label>
+                  <label for="npm">Nama :</label>
                   <input type="text" id="nama" name="nama_peserta" value="<?php echo $Attend['nama_peserta']; ?>" required>
 
-                  <label for="nama" class="block text-sm font-medium text-grey-600">Email :</label>
+                  <label for="nama">Email :</label>
                   <input type="email" id="email" name="email" value="<?php echo $Attend['email']; ?>" required>
 
-                  <label for="alamat" class="block text-sm font-medium text-grey-600">No Telp :</label>
+                  <label for="alamat">No Telp :</label>
                   <input type="no_telp" id="no_telp" name="no_telp" value="<?php echo $Attend['no_telp']; ?>" required >
 
                   <a href="/user/index">Batal</a>
