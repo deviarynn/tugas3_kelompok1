@@ -251,18 +251,19 @@ mvc-sample/
 ├── .htaccess                          # Pengaturan URL rewrite
 └── routes.php                         # Mendefinisikan rute untuk aplikasi
 ```
-
+## Tabel:
+    1. Event: Menyimpan informasi acara
+    2. Organizers: Menyimpan informasi penyelenggara
+    3. Attendees: Menyimpan informasi peserta
+    4. Sponsorship: Menyimpan informasi sponsor
+    
 ## Fitur Utama
 - **Event:** Tambah, Edit,Hapus dan lihat detail acara Seni Tari dan Budaya
 - **Organizers:** Tambah, Edit,Hapus dan lihat detail Data Organizers
 - **Attendees:** Tambah, Edit,Hapus dan lihat detail Data Peserta
 - **Sponsorship:** Tambah, Edit,Hapus dan lihat detail Data Sponsorship
 
-## Tabel:
-    1. Event: Menyimpan informasi acara
-    2. Organizers: Menyimpan informasi penyelenggara
-    3. Attendees: Menyimpan informasi peserta
-    4. Sponsorship: Menyimpan informasi sponsor
+
 ## Dasboard UI
 - **Tampilan Event**
 - **Tampilan Organizers**
