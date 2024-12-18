@@ -18,6 +18,7 @@ Tujuan dari praktikum ini adalah untuk memberikan pemahaman yang lebih baik tent
 - **Organizers:** Tambah, Edit,Hapus dan lihat detail Data Organizers
 - **Attendees:** Tambah, Edit,Hapus dan lihat detail Data Peserta
 - **Sponsorship:** Tambah, Edit,Hapus dan lihat detail Data Sponsorship
+
 ## Tabel:
     1. Event: Menyimpan informasi acara
     2. Organizers: Menyimpan informasi penyelenggara
@@ -294,5 +295,7 @@ mvc-sample/
 ## Dasboard UI
 - **Tampilan Event**
 - **Tampilan Organizers**
+  <img src ='![image](https://github.com/user-attachments/assets/644c92c2-8f4a-485e-98ea-3ddc20b7d157)
+'>
 - **Tampilan Attendees**
 - **Tampilan Sponsorship**
