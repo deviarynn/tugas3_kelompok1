@@ -12,18 +12,6 @@ Proyek ini merupakan aplikasi web sederhana yang menerapkan arsitektur Model-Vie
 
 ## Tujuan
 Tujuan dari praktikum ini adalah untuk memberikan pemahaman yang lebih baik tentang arsitektur MVC dalam pengembangan aplikasi web dan untuk meningkatkan kemampuan mahasiswa dalam menerapkan konsep OOP serta melakukan operasi CRUD (Create, Read, Update, Delete) pada data.
-
-## Fitur Utama
-- **Event:** Tambah, Edit,Hapus dan lihat detail acara Seni Tari dan Budaya
-- **Organizers:** Tambah, Edit,Hapus dan lihat detail Data Organizers
-- **Attendees:** Tambah, Edit,Hapus dan lihat detail Data Peserta
-- **Sponsorship:** Tambah, Edit,Hapus dan lihat detail Data Sponsorship
-
-## Tabel:
-    1. Event: Menyimpan informasi acara
-    2. Organizers: Menyimpan informasi penyelenggara
-    3. Attendees: Menyimpan informasi peserta
-    4. Sponsorship: Menyimpan informasi sponsor
     
 ## Arsitektur MVC
 - **Model:** Mendefinisikan struktur data dan hubungan antara tabel
@@ -263,6 +251,18 @@ mvc-sample/
 ├── .htaccess                          # Pengaturan URL rewrite
 └── routes.php                         # Mendefinisikan rute untuk aplikasi
 ```
+
+## Fitur Utama
+- **Event:** Tambah, Edit,Hapus dan lihat detail acara Seni Tari dan Budaya
+- **Organizers:** Tambah, Edit,Hapus dan lihat detail Data Organizers
+- **Attendees:** Tambah, Edit,Hapus dan lihat detail Data Peserta
+- **Sponsorship:** Tambah, Edit,Hapus dan lihat detail Data Sponsorship
+
+## Tabel:
+    1. Event: Menyimpan informasi acara
+    2. Organizers: Menyimpan informasi penyelenggara
+    3. Attendees: Menyimpan informasi peserta
+    4. Sponsorship: Menyimpan informasi sponsor
 ## Dasboard UI
 - **Tampilan Event**
 - **Tampilan Organizers**
