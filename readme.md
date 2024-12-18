@@ -63,3 +63,79 @@ mvc-sample/
 - **Tampilan Organizers**
 - **Tampilan Attendees**
 - **Tampilan Sponsorship**
+
+# Controller 
+Fungsi: Bertindak sebagai penghubung antara Model dan View.
+
+Tugas:
+
+Menerima input dari pengguna (biasanya dari URL atau formulir).
+Memproses logika bisnis dengan memanggil Model.
+Mengirimkan data ke View untuk ditampilkan
+```php
+class AttendsController{
+    private $AttModel;
+
+    public function __construct() {
+        $this->AttModel = new Peserta();
+    }
+
+    public function index() {
+        $Attends = $this->AttModel->getAllPeserta();
+        require_once '../app/views/user/index.php';
+    }
+
+    public function create() {
+        require_once '../app/views/user/create.php';
+    }
+
+    public function store() {
+        $nama_peserta = $_POST['nama_peserta'];
+        $email = $_POST['email'];
+        $no_telp = $_POST['no_telp'];
+        $this->AttModel->add($nama_peserta, $email, $no_telp);
+        header('Location: /user/index');
+    }
+    // Show the edit form with the user data
+    public function edit($id_peserta) {
+        $Attend = $this->AttModel->find(id_peserta: $id_peserta); // Assume find() gets user by ID_peserta
+        require_once __DIR__ . '/../views/user/edit.php';
+    }
+
+    // Process the update request
+    public function update($id_peserta, $data) {
+        $updated = $this->AttModel->update($id_peserta, $data);
+        if ($updated) {
+            header("Location: /user/index"); // Redirect to user list
+        } else {
+            echo "Failed to update user.";
+        }
+    }
+
+    // Process delete request
+    public function delete($id_peserta) {
+        $deleted = $this->AttModel->delete(id_peserta: $id_peserta);
+        if ($deleted) {
+            header("Location: /user/index"); // Redirect to user list
+        } else {
+            echo "Failed to delete user.";
+        }
+    }
+}
+```
+# View
+Fungsi: Bertanggung jawab atas tampilan (user interface).
+
+Tugas:
+
+Menampilkan data yang diberikan oleh Controller.
+Tidak memiliki logika bisnis atau interaksi dengan database.
+File ini biasanya berupa HTML, CSS, dan PHP (atau menggunakan template engine seperti Blade di Laravel).
+# Models
+Fungsi: Berisi logika bisnis dan interaksi dengan database.
+
+Tugas:
+
+Mengelola data (CRUD: Create, Read, Update, Delete).
+Berinteraksi dengan database menggunakan query atau ORM (Object-Relational Mapping).
+Tidak berkomunikasi langsung dengan View, tetapi memberikan data ke Controller.
