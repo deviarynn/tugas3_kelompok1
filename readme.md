@@ -3,7 +3,7 @@
 ## Informasi Umum
 Proyek ini merupakan bagian dari tugas UAS Mata Kuliah Praktikum Web 2 yang dilakukan oleh Kelompok 1 dari kelas TI-2C Politeknik Negeri Cilacap yang beranggotakan 
 1. Devi Aryani
-2. Galih Fitria Fijar Rofiqoh
+2. Galih Fitria Fijar Rofiqoh (230302060)
 3. Muhammad Abi Adzan
 4. Revano Augustofa 
 
