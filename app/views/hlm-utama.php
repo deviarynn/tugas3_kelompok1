@@ -157,13 +157,13 @@
                 <p>Lihat event menarik yang akan datang.</p>
             </a>
 
-            <a href="attendees.html" class="box">
+            <a href="/peserta/index" class="box">
                 <h2>Attendees</h2>
                 <img src="assets/img/icons/peserta.png" alt="Attendees">
                 <p>Daftar dan lihat peserta event</p>
             </a>
 
-            <a href="sponsorship.html" class="box">
+            <a href="/sponsor/index" class="box">
                 <h2>Sponsorship</h2>
                 <img src="assets/img/icons/sponsor.png" alt="Sponsorship">
                 <p>Jelajahi peluang sponsor untuk event</p>
