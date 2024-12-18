@@ -87,56 +87,56 @@ Tidak berkomunikasi langsung dengan View, tetapi memberikan data ke Controller.
 Tidak memiliki logika bisnis atau interaksi dengan database.
 File ini biasanya berupa HTML, CSS, dan PHP (atau menggunakan template engine seperti Blade di Laravel).
 
-**Create**
-```html
-<html lang="en">
-<head>
-    <title>Tambah Peserta</title>
-</head>
-<body>
-    <h1>Tambah Peserta Baru</h1>
-    <!-- app/views/user/create.php -->
-        <form action="/user/store" method="POST">
-            <label for="name">Nama :</label>
-            <input type="text" name="nama_peserta" id="nama_peserta" required">
-
-            <label for="email" class="block text-sm font-medium text-grey-600">Email:</label>
-            <input type="email" name="email" id="email" required">
-
-            <label for="email">No Telp:</label>
-            <input type="nummber" name="no_telp" id="no_telp" required required">
-              
-            <button type="submit" name="submit" id="submit"> Simpan</button>
-        </form>
-</body>
-</html>
-```
-**Edit**
-```html
-
-<html lang="en">
-<head>
-    <title>Edit Peserta</title>
-</head>
+  **Create**
+    ```html
+    <html lang="en">
+    <head>
+        <title>Tambah Peserta</title>
+    </head>
     <body>
-        <!-- app/views/user/edit.php -->
-        <form action="/user/update/<?php echo $Attend['id_peserta']; ?>" method="POST">
-                <h1 class="text-2xl font-bold mb-5 text-center text-blue-700 border-b-2 pb-7 border-blue-700 ">Edit Peserta</h1>
-                  <label for="npm">Nama :</label>
-                  <input type="text" id="nama" name="nama_peserta" value="<?php echo $Attend['nama_peserta']; ?>" required>
-
-                  <label for="nama">Email :</label>
-                  <input type="email" id="email" name="email" value="<?php echo $Attend['email']; ?>" required>
-
-                  <label for="alamat">No Telp :</label>
-                  <input type="no_telp" id="no_telp" name="no_telp" value="<?php echo $Attend['no_telp']; ?>" required >
-
-                  <a href="/user/index">Batal</a>
-                  <button type="submit" name="submit">Simpan</button>
-         </form>
+        <h1>Tambah Peserta Baru</h1>
+        <!-- app/views/user/create.php -->
+            <form action="/user/store" method="POST">
+                <label for="name">Nama :</label>
+                <input type="text" name="nama_peserta" id="nama_peserta" required">
+    
+                <label for="email" class="block text-sm font-medium text-grey-600">Email:</label>
+                <input type="email" name="email" id="email" required">
+    
+                <label for="email">No Telp:</label>
+                <input type="nummber" name="no_telp" id="no_telp" required required">
+                  
+                <button type="submit" name="submit" id="submit"> Simpan</button>
+            </form>
     </body>
-</html>
-```
+    </html>
+    ```
+  **Edit**
+    ```html
+    
+    <html lang="en">
+    <head>
+        <title>Edit Peserta</title>
+    </head>
+        <body>
+            <!-- app/views/user/edit.php -->
+            <form action="/user/update/<?php echo $Attend['id_peserta']; ?>" method="POST">
+                    <h1 class="text-2xl font-bold mb-5 text-center text-blue-700 border-b-2 pb-7 border-blue-700 ">Edit Peserta</h1>
+                      <label for="npm">Nama :</label>
+                      <input type="text" id="nama" name="nama_peserta" value="<?php echo $Attend['nama_peserta']; ?>" required>
+    
+                      <label for="nama">Email :</label>
+                      <input type="email" id="email" name="email" value="<?php echo $Attend['email']; ?>" required>
+    
+                      <label for="alamat">No Telp :</label>
+                      <input type="no_telp" id="no_telp" name="no_telp" value="<?php echo $Attend['no_telp']; ?>" required >
+    
+                      <a href="/user/index">Batal</a>
+                      <button type="submit" name="submit">Simpan</button>
+             </form>
+        </body>
+    </html>
+    ```
 **Data Table**
 ```php
 <!DOCTYPE html>
