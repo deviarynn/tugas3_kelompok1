@@ -58,3 +58,8 @@ mvc-sample/
 ├── .htaccess                          # Pengaturan URL rewrite
 └── routes.php                         # Mendefinisikan rute untuk aplikasi
 ```
+## Dasboard UI
+- **Tampilan Event**
+- **Tampilan Organizers**
+- **Tampilan Attendees**
+- **Tampilan Sponsorship**
