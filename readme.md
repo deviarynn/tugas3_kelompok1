@@ -1,4 +1,4 @@
-# Praktikum Pemgrograman Web 2 - Politeknik Negeri Cilacap
+# Praktikum Pemrograman Web 2 - Sistem Informasi Acara Seni Tari dan Budaya 
 
 ## Informasi Umum
 Proyek ini merupakan bagian dari kegiatan Praktisi Mengajar batch 5, antara [Politeknik Negeri Cilacap](https://pnc.ac.id/) dengan praktisi [I Nyoman Indra Darmawan](https://nyoman.id) untuk mata kuliah Praktikum Pemgrograman Web 2
