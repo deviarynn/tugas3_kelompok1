@@ -17,8 +17,8 @@
 
         body {
             height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('assets/img/senbud.JPG') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('assets/img/senbud.JPG') no-repeat center center/cover;
             display: flex;
             flex-direction: column;
         }
@@ -54,11 +54,12 @@
             background: rgba(255, 243, 225, 0.76);
             padding: 30px;
             text-align: center;
-            border-radius: 15%; /* Membuat elemen menjadi lingkaran */
+            border-radius: 15%;
+            /* Membuat elemen menjadi lingkaran */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
             font-size: medium;
-            flex: 1 1 calc(20% - 20px); /* Mengatur ukuran box agar sejajar */
+            flex: 1 1 calc(20% - 20px);
             max-width: 200px;
             height: 240px;
             display: flex;
@@ -71,8 +72,8 @@
         }
 
         .box img {
-            width: 80px; 
-            height: 80px; 
+            width: 80px;
+            height: 80px;
             margin-bottom: 15px;
             border-radius: 50%;
         }
@@ -112,10 +113,13 @@
         }
 
         .navbar-brand img {
-            width: 25px; /* Ukuran logo di navbar */
+            width: 25px;
+            /* Ukuran logo di navbar */
             height: 25px;
-            margin-right: 10px; /* Spasi antara logo dan teks */
-            border-radius: 90%; /* Membuat elemen menjadi lingkaran */
+            margin-right: 10px;
+            /* Spasi antara logo dan teks */
+            border-radius: 90%;
+            /* Membuat elemen menjadi lingkaran */
         }
     </style>
 </head>
@@ -128,6 +132,10 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+                    </li>
                 </ul>
             </div>
         </div>
