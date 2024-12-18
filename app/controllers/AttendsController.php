@@ -11,11 +11,15 @@ class AttendsController{
 
     public function index() {
         $Attends = $this->AttModel->getAllPeserta();
-        require_once '../app/views/user/index.php';
+        require_once '../app/views/peserta/index.php';
+    }
+
+    public function dashboard() {
+        require_once '../app/views/hlm-utama.php';
     }
 
     public function create() {
-        require_once '../app/views/user/create.php';
+        require_once '../app/views/peserta/create.php';
     }
 
     public function store() {
@@ -23,21 +27,21 @@ class AttendsController{
         $email = $_POST['email'];
         $no_telp = $_POST['no_telp'];
         $this->AttModel->add($nama_peserta, $email, $no_telp);
-        header('Location: /user/index');
+        header('Location: /peserta/index');
     }
-    // Show the edit form with the user data
+    // Show the edit form with the peserta data
     public function edit($id_peserta) {
-        $Attend = $this->AttModel->find(id_peserta: $id_peserta); // Assume find() gets user by ID_peserta
-        require_once __DIR__ . '/../views/user/edit.php';
+        $Attend = $this->AttModel->find(id_peserta: $id_peserta); // Assume find() gets peserta by ID_peserta
+        require_once __DIR__ . '/../views/peserta/edit.php';
     }
 
     // Process the update request
     public function update($id_peserta, $data) {
         $updated = $this->AttModel->update($id_peserta, $data);
         if ($updated) {
-            header("Location: /user/index"); // Redirect to user list
+            header("Location: /peserta/index"); // Redirect to peserta list
         } else {
-            echo "Failed to update user.";
+            echo "Failed to update peserta.";
         }
     }
 
@@ -45,9 +49,9 @@ class AttendsController{
     public function delete($id_peserta) {
         $deleted = $this->AttModel->delete(id_peserta: $id_peserta);
         if ($deleted) {
-            header("Location: /user/index"); // Redirect to user list
+            header("Location: /peserta/index"); // Redirect to peserta list
         } else {
-            echo "Failed to delete user.";
+            echo "Failed to delete peserta.";
         }
     }
 }

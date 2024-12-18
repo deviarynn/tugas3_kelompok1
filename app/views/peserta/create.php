@@ -11,7 +11,7 @@
     <main class="flex items-center justify-center min-h-screen flex-col">
         <div class="bg-white p-8 rounded-lg shadow-md w-[40%]">
             <h1 class="text-2xl font-bold mb-5 text-center text-blue-500 border-b-2 pb-7 border-blue-600">Tambah Peserta Baru</h1>
-            <form action="/user/store" method="POST">
+            <form action="/peserta/store" method="POST">
                 <div class="mb-2 flex">
                     <label for="name" class="block text-sm font-medium text-grey-600">Nama :</label>
                 </div>
