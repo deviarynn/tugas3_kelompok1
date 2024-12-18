@@ -1,6 +1,8 @@
 <head>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Daftar Organizers</title>
+
     <script>
         function searchOrganizer() {
             const input = document.getElementById('search-input').value.toLowerCase();
@@ -14,8 +16,18 @@
     </script>
 </head>
 
-<body class="bg-gradient-to-b from-[#FAF3E0] to-[#EDE0D4] text-gray-800 min-h-screen p-8">
-
+<body class="font-[Atara] text-3x p-4 bg-gradient-to-b from-[#FAF3E0] to-[#EDE0D4] text-gray-800 min-h-screen p-8">
+    <!-- Navbar -->
+    <nav class="bg-[rgb(167,82,36)] text-white p-2 mb-4 w-full fixed top-0 left-0">
+        <div class="w-full mx-auto flex items-start"> <!-- Navbar dengan elemen di kiri atas -->
+            <!-- Logo dan tulisan Home di pojok kiri atas -->
+            <a href="/" class="flex items-center space-x-2">
+                <img src="https://media.istockphoto.com/id/498494295/id/vektor/web-ikon-tombol-beranda.jpg?s=1024x1024&w=is&k=20&c=8R9FvFO2RtBx-7o_1yoB4LCFdgnwp804FFCOOBP7aGo=" alt="home" class="h-6 w-6">
+                <span class="text-lg font-bold">Dashboard</span>
+            </a>
+               
+        </div>
+    </nav><br>
 
     <h1 class="text-3xl text-orange-700 font-extrabold mb-4 text-center">Daftar Organizers</h1>
 
@@ -72,11 +84,5 @@
         </tbody>
     </table>
 
-
-    <div class="mt-6 text-center">
-        <a href="/" class="text-orange-700 hover:text-orange-800 font-semibold text-lg transition duration-300">
-            ← Kembali ke Halaman Utama
-        </a>
-    </div>
 
 </body>

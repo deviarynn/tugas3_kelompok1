@@ -7,11 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Organizers</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
-<body class="bg-[#FAF3E0] text-gray-800 min-h-screen flex items-center justify-center">
-
+<body class="font-[Atara] text-3x p-4 bg-[#FAF3E0] text-gray-800 min-h-screen flex items-center justify-center">
+    <!-- Navbar -->
+    <nav class="bg-[rgb(167,82,36)] text-white p-2 mb-4 w-full fixed top-0 left-0">
+        <div class="w-full mx-auto flex items-start"> <!-- Navbar dengan elemen di kiri atas -->
+            <!-- Logo dan tulisan Home di pojok kiri atas -->
+            <a href="/" class="flex items-center space-x-2">
+                <img src="https://media.istockphoto.com/id/498494295/id/vektor/web-ikon-tombol-beranda.jpg?s=1024x1024&w=is&k=20&c=8R9FvFO2RtBx-7o_1yoB4LCFdgnwp804FFCOOBP7aGo=" alt="home" class="h-6 w-6">
+                <span class="text-lg font-bold">Dashboard</span>
+            </a>
+        </div>
+    </nav><br>
 
     <div class="bg-white max-w-md w-full rounded-xl shadow-lg p-8 border-t-8 border-orange-700">
         <div class="flex items-center justify-center mb-6">
