@@ -21,11 +21,15 @@ Tujuan dari praktikum ini adalah untuk memberikan pemahaman yang lebih baik tent
 
 ## Arsitektur MVC
 - **Model:** Mendefinisikan struktur data dan hubungan antara tabel
-  - Tabel:
+  - **Tabel:**
     1. Event: Menyimpan informasi acara
     2. Organizers: Menyimpan informasi penyelenggara
     3. Attendees: Menyimpan informasi peserta
     4. Sponsorship: Menyimpan informasi sponsor
+   
+- **View:** Menyediakan tampilan antarmuka pengguna (UI) untuk berinteraksi dengan sistem
+- **Controller:** Mengatur alur data antara Model dan View, serta menangani logika bisnis
+-  
 ## Tech Stack
 - **Bahasa Pemrograman:** PHP
 - **Database:** MySQL
@@ -105,8 +109,4 @@ mvc-sample/
         ```
     - Akses Proyek: Buka browser dan akses aplikasi di ```localhost:8080```.
 
-## Kontribusi
-Jika ingin berkontribusi pada proyek ini, silakan buat branch baru dan kirim pull request.
 
-## Lisensi
-Proyek ini dilisensikan under MIT License.
