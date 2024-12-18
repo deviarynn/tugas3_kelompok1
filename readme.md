@@ -4,7 +4,7 @@
 Proyek ini merupakan bagian dari tugas UAS Mata Kuliah Praktikum Web 2 yang dilakukan oleh Kelompok 1 dari kelas TI-2C Politeknik Negeri Cilacap yang beranggotakan 
 1. Devi Aryani (230102057)
 2. Galih Fitria Fijar Rofiqoh (230302060)
-3. Muhammad Abi Adzan
+3. Muhammad Abi Adzan (230202068)
 4. Revano Augustofa (230102071)
 
 ## Deskripsi Proyek
