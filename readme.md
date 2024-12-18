@@ -295,7 +295,8 @@ mvc-sample/
 ## Dasboard UI
 - **Tampilan Event**
 - **Tampilan Organizers**
-  <img src ='github.com/user-attachments/assets/644c92c2-8f4a-485e-98ea-3ddc20b7d157
+  <img src ='https://github.com/user-attachments/assets/644c92c2-8f4a-485e-98ea-3ddc20b7d157
 '>
+
 - **Tampilan Attendees**
 - **Tampilan Sponsorship**
