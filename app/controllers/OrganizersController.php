@@ -14,12 +14,17 @@ class OrganizersController
     public function index()
     {
         $organizers = $this->OrganizersModel->getAllOrganizers();
-        require_once '../app/views/user/index.php';
+        require_once '../app/views/organizers/index.php';
+    }
+
+    public function dashboard()
+    {
+        require_once '../app/views/hlm-utama.php';
     }
 
     public function create()
     {
-        require_once '../app/views/user/create.php';
+        require_once '../app/views/organizers/create.php';
     }
 
     public function store()
@@ -30,13 +35,13 @@ class OrganizersController
         $email = $_POST['email'];
 
         $this->OrganizersModel->add($id_penyelenggara, $nama, $kontak, $email);
-        header('Location: /user/index');
+        header('Location: /organizers/index');
     }
     // Show the edit form with the user data
     public function edit($id_penyelenggara)
     {
         $organizer = $this->OrganizersModel->find($id_penyelenggara); // Assume find() gets user by ID
-        require_once __DIR__ . '/../views/user/edit.php';
+        require_once __DIR__ . '/../views/organizers/edit.php';
     }
 
     // Process the update request
@@ -44,7 +49,7 @@ class OrganizersController
     {
         $updated = $this->OrganizersModel->update($id_penyelenggara, $data);
         if ($updated) {
-            header("Location: /user/index"); // Redirect to user list
+            header("Location: /organizers/index"); // Redirect to user list
         } else {
             echo "Failed to update user.";
         }
@@ -55,7 +60,7 @@ class OrganizersController
     {
         $deleted = $this->OrganizersModel->delete($id_penyelenggara);
         if ($deleted) {
-            header("Location: /user/index"); // Redirect to user list
+            header("Location: /organizers/index"); // Redirect to user list
         } else {
             echo "Failed to delete user.";
         }

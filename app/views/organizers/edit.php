@@ -31,7 +31,7 @@
             </h2>
         </div>
 
-        <form action="/user/update/<?php echo $organizer['id_penyelenggara']; ?>" method="POST" class="space-y-6">
+        <form action="/organizers/update/<?php echo $organizer['id_penyelenggara']; ?>" method="POST" class="space-y-6">
             <div>
                 <label for="nama_penyelenggara" class="block text-gray-700 font-semibold mb-2">
                     Nama Penyelenggara:
@@ -65,7 +65,7 @@
         </form>
 
         <div class="text-center mt-6">
-            <a href="/user/index" class="text-orange-700 hover:text-orange-800 font-semibold transition duration-200">
+            <a href="/organizers/index" class="text-orange-700 hover:text-orange-800 font-semibold transition duration-200">
                 ← Back to List
             </a>
         </div>

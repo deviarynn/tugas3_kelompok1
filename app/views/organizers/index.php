@@ -1,6 +1,6 @@
 <head>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Daftar Organizers</title>
 
     <script>
@@ -13,32 +13,43 @@
                 row.style.display = name.includes(input) ? '' : 'none';
             });
         }
+
+        function confirmDelete(id) {
+            Swal.fire({
+                title: 'Apakah Anda yakin?',
+                text: "Data yang dihapus tidak dapat dikembalikan!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ya, hapus!',
+                cancelButtonText: 'Batal'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = `/organizers/delete/${id}`;
+                }
+            });
+        }
     </script>
 </head>
 
 <body class="font-[Atara] text-3x p-4 bg-gradient-to-b from-[#FAF3E0] to-[#EDE0D4] text-gray-800 min-h-screen p-8">
     <!-- Navbar -->
     <nav class="bg-[rgb(167,82,36)] text-white p-2 mb-4 w-full fixed top-0 left-0">
-        <div class="w-full mx-auto flex items-start"> <!-- Navbar dengan elemen di kiri atas -->
-            <!-- Logo dan tulisan Home di pojok kiri atas -->
+        <div class="w-full mx-auto flex items-start">
             <a href="/" class="flex items-center space-x-2">
                 <img src="https://media.istockphoto.com/id/498494295/id/vektor/web-ikon-tombol-beranda.jpg?s=1024x1024&w=is&k=20&c=8R9FvFO2RtBx-7o_1yoB4LCFdgnwp804FFCOOBP7aGo=" alt="home" class="h-6 w-6">
                 <span class="text-lg font-bold">Dashboard</span>
             </a>
-               
         </div>
     </nav><br>
 
     <h1 class="text-3xl text-orange-700 font-extrabold mb-4 text-center">Daftar Organizers</h1>
 
-
     <div class="mb-6 flex justify-between items-center px-6">
-
-
-        <a href="/user/create" class="bg-orange-700 text-white px-4 py-2 rounded-lg font-bold hover:bg-orange-800 transition duration-300 shadow-lg transform hover:scale-105">
+        <a href="/organizers/create" class="bg-orange-700 text-white px-4 py-2 rounded-lg font-bold hover:bg-orange-800 transition duration-300 shadow-lg transform hover:scale-105">
             Tambah Organizers Baru
         </a>
-
 
         <div class="flex items-center">
             <input id="search-input" type="text" placeholder="Cari Organizers..."
@@ -49,7 +60,6 @@
             </button>
         </div>
     </div>
-
 
     <table id="organizer-table" class="w-full border-collapse shadow-lg rounded-lg overflow-hidden mx-auto bg-white">
         <thead>
@@ -69,13 +79,11 @@
                     <td class="py-3 px-4 border-b"><?= htmlspecialchars($organizer['kontak']) ?></td>
                     <td class="py-3 px-4 border-b"><?= htmlspecialchars($organizer['email']) ?></td>
                     <td class="py-3 px-4 border-b text-center">
-
-                        <a href="/user/edit/<?php echo $organizer['id_penyelenggara']; ?>" class="inline-block bg-green-600 text-white px-3 py-1 rounded-lg text-sm font-semibold hover:bg-green-700 transition duration-300 mr-2">
+                        <a href="/organizers/edit/<?php echo $organizer['id_penyelenggara']; ?>" class="inline-block bg-green-600 text-white px-3 py-1 rounded-lg text-sm font-semibold hover:bg-green-700 transition duration-300 mr-2">
                             Edit
                         </a>
-
-                        <a href="/user/delete/<?php echo $organizer['id_penyelenggara']; ?>" class="inline-block bg-red-600 text-white px-3 py-1 rounded-lg text-sm font-semibold hover:bg-red-700 transition duration-300"
-                            onclick="return confirm('Are you sure?')">
+                        <a href="javascript:void(0);" class="inline-block bg-red-600 text-white px-3 py-1 rounded-lg text-sm font-semibold hover:bg-red-700 transition duration-300"
+                            onclick="confirmDelete(<?php echo $organizer['id_penyelenggara']; ?>)">
                             Delete
                         </a>
                     </td>
@@ -83,6 +91,4 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-
-
 </body>

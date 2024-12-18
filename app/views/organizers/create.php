@@ -30,7 +30,7 @@
         </div>
 
 
-        <form action="/user/store" method="POST" class="space-y-6">
+        <form action="/organizers/store" method="POST" class="space-y-6">
             <div>
                 <label for="nama_penyelenggara" class="block text-lg font-semibold text-gray-700 mb-2">Nama Penyelenggara</label>
                 <input type="text" id="nama_penyelenggara" name="nama_penyelenggara" required
@@ -56,7 +56,7 @@
         </form>
 
         <div class="text-center mt-8">
-            <a href="/user/index" class="text-orange-700 hover:text-orange-800 font-semibold text-lg transition duration-300">
+            <a href="/organizers/index" class="text-orange-700 hover:text-orange-800 font-semibold text-lg transition duration-300">
                 ← Kembali ke Daftar Organizers
             </a>
         </div>
