@@ -5,7 +5,7 @@ Proyek ini merupakan bagian dari tugas UAS Mata Kuliah Praktikum Web 2 yang dila
 1. Devi Aryani
 2. Galih Fitria Fijar Rofiqoh (230302060)
 3. Muhammad Abi Adzan
-4. Revano Augustofa 
+4. Revano Augustofa (230102071)
 
 ## Deskripsi Proyek
 Proyek ini merupakan aplikasi web sederhana yang menerapkan arsitektur Model-View-Controller (MVC) dengan menggunakan konsep Pemrograman Berorientasi Objek (OOP). Sistem Informasi Berbasis Web ini merupakan contoh yang menerapkan MVC.
@@ -16,7 +16,7 @@ Tujuan dari praktikum ini adalah untuk memberikan pemahaman yang lebih baik tent
 ## Fitur Utama
 - **Event:** Tambah, Edit,Hapus dan lihat detail acara Seni Tari dan Budaya
 - **Organizers:** Tambah, Edit,Hapus dan lihat detail Data Organizers
-- **Attends:** Tambah, Edit,Hapus dan lihat detail Data Peserta
+- **Attendees:** Tambah, Edit,Hapus dan lihat detail Data Peserta
 - **Sponsorship:** Tambah, Edit,Hapus dan lihat detail Data Sponsorship
 
 ## Arsitektur MVC
@@ -33,7 +33,7 @@ Tujuan dari praktikum ini adalah untuk memberikan pemahaman yang lebih baik tent
 ## Tech Stack
 - **Bahasa Pemrograman:** PHP
 - **Database:** MySQL
-- **Frontend:** HTML, CSS, JavaScript
+- **Frontend:** HTML, CSS, JavaScript, dan Tailwind
 - **Version Control:** Git (GitLab)
 - **Web Server:** Apache (dengan .htaccess untuk pengaturan URL)
 
