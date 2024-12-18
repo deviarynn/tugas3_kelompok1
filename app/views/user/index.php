@@ -2,9 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Data Peserta</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
@@ -14,7 +12,9 @@
         <div class="bg-gray-50 rounded-[10px] w-full p-4 shadow-md  items-center">
             <div class="flex justify-between">
                 <h1 class="font-bold text-2xl text-sky-600 drop-shadow-md">Daftar Peserta</h1>
-                <a href="/user/create" class="border-2 rounded-md border-green-500 bg-green-400 pl-3 pr-3">Tambah Peserta Baru</a>
+                <a href="/user/create"
+                    class="border-2 rounded-md border-green-500 bg-green-400 pl-3 pr-3 hover:bg-green-700 hover:text-white">Tambah
+                    Peserta Baru</a>
             </div>
             <div class="pt-5 pb-5 flex items-center justify-center w-full overflow-x-auto">
                 <table class=" border-white pb-auto w-full table table-zebra">
@@ -26,7 +26,7 @@
                         <th>No Handphone</th>
                         <th>Opsi</th>
                     </tr>
-                    <tbody>
+
                     <!-- app/views/user/index.php -->
                     <?php foreach ($Attends as $peserta): ?>
                     <tr class="pointer border-b hover:bg-gray-300 text-center">
@@ -47,10 +47,14 @@
                         <img src="" alt="">
                         <?php endforeach; ?>
                     </tr>
-                    </tbody>
+
                 </table>
             </div>
         </div>
+            <div class="flex items-center justify-center">
+                <a class="text-center pt-6 text-blue-600" href="#">
+                    <---- Kembali ke halaman utama </a>
+            </div>
     </div>
 
 </body>

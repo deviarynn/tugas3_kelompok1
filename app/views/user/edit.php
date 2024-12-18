@@ -2,19 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit mahasiswa</title>
+    <title>Edit Peserta</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-zinc-200">
+<body class="bg-zinc-100">
     <main class="flex items-center justify-center min-h-screen flex-col">
 
         <div class="bg-white p-8 rounded-lg shadow-md w-[40%]">
             <!-- app/views/user/edit.php -->
             <form action="/user/update/<?php echo $Attend['id_peserta']; ?>" method="POST">
-                <h1 class="text-2xl font-bold mb-5 text-center text-green-900 ">Edit Peserta</h1>
+                <h1 class="text-2xl font-bold mb-5 text-center text-blue-700 border-b-2 pb-7 border-blue-700 ">Edit Peserta</h1>
                 <div class="flex mb-2">
                     <label for="npm" class="block text-sm font-medium text-grey-600">Nama :</label>
                 </div>
@@ -34,9 +32,9 @@
                     class="mb-4 mt-1 p-2 w-full border border-gray-400 rounded-md">
                 <div class="flex justify-end">
                     <a href="/user/index"
-                        class="bg-orange-400  text-white p-3 w-20  boder rounded-md mt-1 text-center">Batal</a>
+                        class="bg-orange-400  hover:bg-orange-700 text-white p-3 w-20  boder rounded-md mt-1 text-center">Batal</a>
                     <button type="submit" name="submit"
-                        class="bg-blue-500  text-white p-3 w-20  boder rounded-md mt-1 ml-4">Simpan</button>
+                        class="bg-blue-500 hover:bg-blue-700 text-white p-3 w-20  boder rounded-md mt-1 ml-4">Simpan</button>
                 </div>
             </form>
         </div>
