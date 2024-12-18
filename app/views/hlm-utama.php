@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,7 +60,6 @@
             transition: transform 0.3s ease;
             font-size: medium;
             flex: 1 1 calc(20% - 20px);
-            /* Mengatur ukuran box agar sejajar */
             max-width: 200px;
             height: 240px;
             display: flex;
@@ -88,7 +86,7 @@
             padding: 0.01px;
         }
 
-        .box p {
+        .box p  {
             font-size: 0.9rem;
             color: rgb(71, 69, 69);
             justify-content: center;
@@ -125,7 +123,6 @@
         }
     </style>
 </head>
-
 <body>
     <!-- Navbar menggunakan Bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
@@ -150,31 +147,31 @@
         </div>
 
         <!-- Box untuk Dashboard -->
-        <div class="row">
-            <a href="/event/index" class="box">
-                <h2>Events</h2>
-                <img src="assets/img/icons/event.png" alt="Event">
-                <p>Lihat event menarik yang akan datang.</p>
-            </a>
+    <div class="row">
+    <a href="/event/index" class="box">
+    <h2>Events</h2>
+        <img src="assets/img/icons/event.png" alt="Event">
+        <p>Lihat event menarik yang akan datang.</p>
+        </a>
+     
+        <a href="/peserta/index" class="box">
+        <h2>Attendees</h2>
+        <img src="assets/img/icons/peserta.png" alt="Attendees">
+        <p>Daftar dan lihat peserta event</p>
+        </a>
 
-            <a href="/peserta/index" class="box">
-                <h2>Attendees</h2>
-                <img src="assets/img/icons/peserta.png" alt="Attendees">
-                <p>Daftar dan lihat peserta event</p>
-            </a>
-
-            <a href="/sponsor/index" class="box">
-                <h2>Sponsorship</h2>
-                <img src="assets/img/icons/sponsor.png" alt="Sponsorship">
-                <p>Jelajahi peluang sponsor untuk event</p>
-            </a>
-
-            <a href="/organizers/index" class="box">
-                <h2>Organizers</h2>
-                <img src="assets/img/icons/organizers.png" alt="Organizers">
-                <p>Temui penyelenggara event profesional.</p>
-            </a>
-        </div>
+        <a href="/sponsor/index" class="box">
+        <h2>Sponsorship</h2>
+        <img src="assets/img/icons/sponsor.png" alt="Sponsorship">
+        <p>Jelajahi peluang sponsor untuk event</p>
+        </a>
+        
+        <a href="/organizers/index" class="box">
+        <h2>Organizers</h2>
+        <img src="assets/img/icons/organizers.png" alt="Organizers">
+        <p>Temui penyelenggara event profesional.</p>
+        </a>
+    </div>
 
     </div>
     <!-- Footer -->
@@ -185,5 +182,4 @@
     <!-- Menambahkan skrip Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
