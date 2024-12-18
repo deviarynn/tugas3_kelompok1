@@ -13,7 +13,7 @@
     body {
         color: #566787;
         background: #f5f5f5;
-        font-family: "Varela Round", sans-serif;
+        font-family: atara;
         font-size: 13px;
     }
 

@@ -19,7 +19,7 @@
     body {
         color: #566787;
         background: #f5f5f5;
-        font-family: 'Varela Round', sans-serif;
+        font-family: atara;
         font-size: 13px;
     }
 
@@ -68,12 +68,11 @@
     }
 
     .swal2-popup {
-            font-size: 1.6rem !important;
+        font-size: 1.6rem !important;
     }
 </style>
 
 <script>
-
     document.addEventListener('DOMContentLoaded', function() {
         const createButtons = document.querySelectorAll('.btn-info');
 
@@ -83,9 +82,11 @@
 
             // Display SweetAlert confirmation
             Swal.fire({
-                title: 'Berhasil!',
-                text: 'Data telah diperbarui.',
-                icon: 'success',
+                title: "Apakah data sponsor ingin di update?",
+                showDenyButton: true,
+                showCancelButton: true,
+                confirmButtonText: "Save",
+                denyButtonText: `Don't save`
             }).then((result) => {
                 if (result.isConfirmed) {
                     // Proceed with form submission
@@ -95,6 +96,7 @@
                         })
                         .then(() => {
                             // Redirect to index page
+                            Swal.fire("Saved!", "", "success",);
                             window.location.href = '/sponsor/index';
                         })
                         .catch(error => {
@@ -105,11 +107,12 @@
                                 'error'
                             );
                         });
-                    }
-                })
-            });
+                } else if (result.isDenied) {
+                    Swal.fire("Changes are not saved", "", "info");
+                }
+            })
         });
-
+    });
 </script>
 
 <body>

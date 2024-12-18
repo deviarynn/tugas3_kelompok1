@@ -6,13 +6,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 
 <head>
     <style type="text/css">
         body {
             color: #566787;
             background: #f5f5f5;
-            font-family: "Varela Round", sans-serif;
+            font-family: atara;
             font-size: 13px;
         }
 
@@ -283,6 +284,32 @@
         .swal2-popup {
             font-size: 1.6rem !important;
         }
+
+        .search-box {
+            float: right;
+            position: relative;
+            font-size: 14px;
+        }
+
+        .search-box input[type="text"] {
+            height: 34px;
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            box-shadow: none;
+        }
+
+        .search-box input[type="text"]:focus {
+            border: 1px solid #03a9f4;
+        }
+
+        .search-box i {
+            color: #a0a5b1;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     </style>
 
     <script type="text/javascript">
@@ -358,11 +385,31 @@
                 });
             });
         });
+
+        $(document).ready(function() {
+            $("#searchInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("table tbody tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+            });
+        });
     </script>
 
 </head>
 
 <body>
+    <!-- Navbar -->
+    <nav class="bg-[rgb(167,82,36)] text-white p-5 mb-4 w-full fixed top-0 left-0">
+        <div class="w-full mx-auto flex items-start"> <!-- Navbar dengan elemen di kiri atas -->
+            <!-- Logo dan tulisan Home di pojok kiri atas -->
+            <a href="/" class="flex items-center space-x-2">
+                <img src="https://media.istockphoto.com/id/498494295/id/vektor/web-ikon-tombol-beranda.jpg?s=1024x1024&w=is&k=20&c=8R9FvFO2RtBx-7o_1yoB4LCFdgnwp804FFCOOBP7aGo=" alt="home" class="h-6 w-6">
+                <span class="text-md font-bold ">Dashboard</span>
+            </a>
+        </div>
+    </nav>
+    <div class="mt-16"></div>
     <div class="container">
         <div class="table-wrapper">
             <div class="table-title">
@@ -374,6 +421,10 @@
                         <a href="/sponsor/create" type="button" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Tambah Sponsor</span></a>
                     </div>
                 </div>
+            </div>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Cari sponsor...">
+                <i class="material-icons">search</i>
             </div>
             <ul>
                 <table class="table table-striped table-hover">
@@ -413,5 +464,10 @@
                 </table>
             </ul>
         </div>
+    </div>
+    <div class="mt-6 text-center">
+        <a href="/" class="text-orange-700 hover:text-orange-800 font-semibold text-lg transition duration-300">
+            ← Kembali ke Halaman Utama
+        </a>
     </div>
 </body>
