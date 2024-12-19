@@ -109,7 +109,7 @@ File ini biasanya berupa HTML, CSS, dan PHP (atau menggunakan template engine se
         <body>
             <!-- app/views/user/edit.php -->
             <form action="/user/update/<?php echo $Attend['id_peserta']; ?>" method="POST">
-                    <h1 class="text-2xl font-bold mb-5 text-center text-blue-700 border-b-2 pb-7 border-blue-700 ">Edit Peserta</h1>
+                    <h1>Edit Peserta</h1>
                       <label for="npm">Nama :</label>
                       <input type="text" id="nama" name="nama_peserta" value="<?php echo $Attend['nama_peserta']; ?>" required>
     
