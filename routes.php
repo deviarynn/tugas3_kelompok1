@@ -7,7 +7,7 @@ $controller = new SponsorController();
 $url = $_SERVER['REQUEST_URI'];
 $requestMethod = $_SERVER['REQUEST_METHOD'];
 
-if ($url == '/sponsor/index' || $url == '/') {
+if ($url == '/sponsor/index') {
     $controller->index();
 } elseif ($url == '/sponsor/create' && $requestMethod == 'GET') {
     $controller->create();
@@ -22,6 +22,8 @@ if ($url == '/sponsor/index' || $url == '/') {
 } elseif (preg_match('/\/sponsor\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $userId = $matches[1];
     $controller->delete($userId);
+}elseif ($url == '/'){
+    $controller->dashboard();
 } else {
     http_response_code(404);
     echo "404 Not Found";

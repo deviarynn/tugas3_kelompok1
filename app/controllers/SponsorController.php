@@ -15,6 +15,10 @@ class SponsorController {
 
     }
 
+    public function dashboard(){
+        require_once '../app/views/hlm-utama.php';
+    }
+
     public function create() {
         require_once '../app/views/sponsor/create.php';
     }

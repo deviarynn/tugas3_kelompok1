@@ -7,6 +7,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 <head>
     <style type="text/css">
@@ -310,6 +311,22 @@
             top: 50%;
             transform: translateY(-50%);
         }
+
+        .navbar-custom {
+            background-color: rgb(167, 82, 36);
+            padding: 6px;
+            font-size: medium;
+        }
+
+        .navbar-brand img {
+            width: 25px;
+            /* Ukuran logo di navbar */
+            height: 25px;
+            margin-right: 10px;
+            /* Spasi antara logo dan teks */
+            border-radius: 90%;
+            /* Membuat elemen menjadi lingkaran */
+        }
     </style>
 
     <script type="text/javascript">
@@ -404,12 +421,12 @@
         <div class="w-full mx-auto flex items-start"> <!-- Navbar dengan elemen di kiri atas -->
             <!-- Logo dan tulisan Home di pojok kiri atas -->
             <a href="/" class="flex items-center space-x-2">
-                <img src="https://media.istockphoto.com/id/498494295/id/vektor/web-ikon-tombol-beranda.jpg?s=1024x1024&w=is&k=20&c=8R9FvFO2RtBx-7o_1yoB4LCFdgnwp804FFCOOBP7aGo=" alt="home" class="h-6 w-6">
-                <span class="text-md font-bold ">Dashboard</span>
+                <img src="https://media.istockphoto.com/id/498494295/id/vektor/web-ikon-tombol-beranda.jpg?s=1024x1024&w=is&k=20&c=8R9FvFO2RtBx-7o_1yoB4LCFdgnwp804FFCOOBP7aGo=" alt="home" class="h-10 w-10">
+                <span class="text-mg font-bold">Dashboard</span>
             </a>
         </div>
     </nav>
-    <div class="mt-16"></div>
+    <div class="mt-20"></div>
     <div class="container">
         <div class="table-wrapper">
             <div class="table-title">
