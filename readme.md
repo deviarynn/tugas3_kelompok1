@@ -266,6 +266,8 @@ mvc-sample/
 
 ## Dasboard UI
 - **Tampilan Event**
+![Screenshot (5) 1](https://github.com/user-attachments/assets/0119bfc4-92fa-40ff-ae2f-70a97c996f29)
+
 - **Tampilan Organizers**
   
   <img src ='https://github.com/user-attachments/assets/644c92c2-8f4a-485e-98ea-3ddc20b7d157'>
