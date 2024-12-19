@@ -18,7 +18,7 @@
         body {
             height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('assets/img/senbud.JPG') no-repeat center center/cover;
+                url('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTL0Sid4pBrIz_NfXh7AKSW0LvIfWI4hkAntaqcN5U5CJg6hw56') no-repeat center center/cover;
             display: flex;
             flex-direction: column;
         }
